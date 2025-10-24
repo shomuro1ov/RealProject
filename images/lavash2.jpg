@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<!--[if IE 8 ]><html dir="ltr" lang="ru" class="ie8"><![endif]-->
+<!--[if IE 9 ]><html dir="ltr" lang="ru" class="ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html dir="ltr" lang="ru">
+<!--<![endif]-->
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Лаваш с курицей</title>
+			
+<base href="https://www.restoran-shafran.uz/" />
+<script src="catalog/view/javascript/jquery/jquery-2.1.1.min.js"></script>
+<link href="catalog/view/theme/default/stylesheet/bootstrap.min.css" rel="stylesheet" media="screen" />
+<script src="catalog/view/javascript/bootstrap/js/bootstrap.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="catalog/view/javascript/jquery/magnific/magnific-popup.css" type="text/css" rel="stylesheet" media="screen" />
+<link href="catalog/view/javascript/jquery/datetimepicker/bootstrap-datetimepicker.min.css" type="text/css" rel="stylesheet" media="screen" />
+<link href="catalog/view/theme/default/stylesheet/stylesheet.min.css" rel="stylesheet">
+<script src="catalog/view/javascript/jquery/magnific/jquery.magnific-popup.min.js"></script>
+<script src="catalog/view/javascript/jquery/datetimepicker/moment.js"></script>
+<script src="catalog/view/javascript/jquery/datetimepicker/bootstrap-datetimepicker.min.js"></script>
+<script src="catalog/view/extension/live_price/js/liveopencart.live_price.js?v=8.00"></script>
+<script src="catalog/view/javascript/common.js"></script>
+<link href="https://www.restoran-shafran.uz/fast-food/lavash-s-kuricej" rel="canonical" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#f45f18">
+<meta name="msapplication-TileColor" content="#2e1500">
+<meta name="theme-color" content="#2e1500">
+</head>
+<body class="product-product-81">
+
+
+
+<header class="header">
+  <div class="container">
+    <div class="header-inner">
+
+
+      <button type="button" class="btn btn-primary btn-toggle-menu visible-xs" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div id="logo">
+                <a href="https://www.restoran-shafran.uz/"><img src="https://www.restoran-shafran.uz/image/catalog/logo.png" title="Халял Ресторан &quot;SHAFRAN&quot; в Бухаре" alt="Халял Ресторан &quot;SHAFRAN&quot; в Бухаре" class="img-responsive" width="171" height="70" /></a>
+              </div>
+
+      <div class="header-phone dropdown">
+        <button class="dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fa fa-phone fa-lg"></i>
+        </button>
+        <div class="dropdown-menu dropdown-menu-right header-phone__items" aria-labelledby="dropdownMenu1">
+          <div class="phone-item">
+            <img class="phone-item__icon" src="/image/catalog/icons/1.png" width="32" height="32" alt="Ресторан">
+            <div class="phone-item__body">
+              <small>Ресторан</small><br>
+              <a class="phone-item__num" href="tel:+998652236500">+998 65 223-65-00</a>
+            </div>
+          </div>
+          <div class="phone-item">
+            <img class="phone-item__icon" src="/image/catalog/icons/2.png" width="32" height="32" alt="Заказ + доставка">
+            <div class="phone-item__body">
+              <small>Заказ + доставка</small><br>
+              <a class="phone-item__num" href="tel:+998978606500">+998 97 860-65-00</a>
+            </div>
+          </div>
+          <div class="phone-item">
+            <img class="phone-item__icon" src="/image/catalog/icons/3.png" width="32" height="32" alt="Торты, Выпечка">
+            <div class="phone-item__body">
+              <small>Торты, Выпечка</small><br>
+              <a class="phone-item__num" href="tel:+998978556500">+998 97 855-65-00</a>
+            </div>
+          </div>
+          <div class="phone-item phone-item--btn">
+            <a href="/contacts/" class="btn btn-primary btn-sm">Все контакты</a>
+          </div>
+        </div>
+      </div>
+
+      <div id="cart" class="btn-group">
+  <button type="button" data-toggle="dropdown" data-loading-text="Загрузка..." class="btn dropdown-toggle"><i class="fa fa-shopping-basket"></i> <span id="cart-total"><span class="products">0</span> <span class="prices">0 сўм</span></span></button>
+  <ul class="dropdown-menu pull-right">
+        <li>
+      <p class="text-center">Ваша корзина пуста!</p>
+    </li>
+      </ul>
+</div>
+
+    </div>
+  </div>
+</header>
+
+  <nav id="menu" class="navbar">
+    <div class="container">
+      <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <ul class="nav navbar-nav">
+                              <li class="dropdown"><a href="https://www.restoran-shafran.uz/index.php?route=" class="dropdown-toggle" data-toggle="dropdown">Меню на доставку</a>
+            <div class="dropdown-menu">
+              <div class="dropdown-inner">
+                                <ul class="list-unstyled">
+                                    <li><a href="https://www.restoran-shafran.uz/fast-food/">Fast Food</a></li>
+                                    <li><a href="https://www.restoran-shafran.uz/eda-iz-restorana/">Еда из Ресторана</a></li>
+                                    <li><a href="https://www.restoran-shafran.uz/torti-i-pechennie/">Торты и печенные</a></li>
+                                    <li><a href="https://www.restoran-shafran.uz/napitki-i-soki/">Напитки и Соки</a></li>
+                                  </ul>
+                              </div>
+              <a href="https://www.restoran-shafran.uz/index.php?route=" class="see-all">Смотреть ВсеМеню на доставку</a>
+            </div>
+          </li>
+                                        <li><a href="/restoran">Ресторан</a></li>
+                                        <li><a href="https://www.restoran-shafran.uz/fast-food-page">Fast Food</a></li>
+                                        <li><a href="https://www.restoran-shafran.uz/dostavka-i-oplata">Доставка и Оплата</a></li>
+                                        <li><a href="/otzyvy/">Отзывы</a></li>
+                                        <li><a href="https://www.restoran-shafran.uz/gallery">Фото</a></li>
+                                        <li><a href="/contacts/">Контакты</a></li>
+                            </ul>
+      </div>
+    </div>
+  </nav>
+  <div id="short-header" class="short-header">
+  <div class="container">
+    <div class="short-header__inner">
+      <h1>Лаваш с курицей</h1>
+      <ul class="breadcrumb">
+                <li><a href="https://www.restoran-shafran.uz/"><i class="fa fa-home"></i></a></li>
+                <li><a href="https://www.restoran-shafran.uz/fast-food/">Fast Food</a></li>
+                <li><a href="https://www.restoran-shafran.uz/fast-food/lavash-s-kuricej">Лаваш с курицей</a></li>
+              </ul>
+    </div>
+  </div>
+</div>
+<div class="pagecontent">
+<div class="container">
+  <div class="row">                <div id="content" class="col-sm-12">	
+      <div class="row product-info">
+                                <div class="col-sm-6">
+                    <ul class="thumbnails">
+                        <li><div class="image"><a class="thumbnail" href="https://www.restoran-shafran.uz/image/cache/catalog/product/lavash-v-tandire-i-s-sirom-1-750x500.jpg" title="Лаваш с курицей"><img src="https://www.restoran-shafran.uz/image/cache/catalog/product/lavash-v-tandire-i-s-sirom-1-560x373.jpg" title="Лаваш с курицей" alt="Лаваш с курицей" /></a></div></li>
+                                                <li class="image-additional"><a class="thumbnail" href="https://www.restoran-shafran.uz/image/cache/catalog/product/lavash-v-tandire-i-s-sirom-2-750x500.jpg" title="Лаваш с курицей"> <img src="https://www.restoran-shafran.uz/image/cache/catalog/product/lavash-v-tandire-i-s-sirom-2-74x49.jpg" title="Лаваш с курицей" alt="Лаваш с курицей" /></a></li>
+                        <li class="image-additional"><a class="thumbnail" href="https://www.restoran-shafran.uz/image/cache/catalog/product/lavash-v-tandire-i-s-sirom-3-750x500.jpg" title="Лаваш с курицей"> <img src="https://www.restoran-shafran.uz/image/cache/catalog/product/lavash-v-tandire-i-s-sirom-3-74x49.jpg" title="Лаваш с курицей" alt="Лаваш с курицей" /></a></li>
+                        <li class="image-additional"><a class="thumbnail" href="https://www.restoran-shafran.uz/image/cache/catalog/product/lavash-v-tandire-i-s-sirom-4-750x500.jpg" title="Лаваш с курицей"> <img src="https://www.restoran-shafran.uz/image/cache/catalog/product/lavash-v-tandire-i-s-sirom-4-74x49.jpg" title="Лаваш с курицей" alt="Лаваш с курицей" /></a></li>
+                        <li class="image-additional"><a class="thumbnail" href="https://www.restoran-shafran.uz/image/cache/catalog/product/lavash-v-tandire-i-s-sirom-5-750x500.jpg" title="Лаваш с курицей"> <img src="https://www.restoran-shafran.uz/image/cache/catalog/product/lavash-v-tandire-i-s-sirom-5-74x49.jpg" title="Лаваш с курицей" alt="Лаваш с курицей" /></a></li>
+                                  </ul>
+                  
+		</div>
+                                <div class="col-sm-6">
+            <h1 class="mt-0">Лаваш с курицей</h1>
+                        <div class="rating">
+                                          <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i></span>
+                                                        <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i></span>
+                                                        <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i></span>
+                                                        <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i></span>
+                                                        <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i></span>
+                                          <a href="" onclick="$('a[href=\'#tab-review\']').trigger('click'); return false;">0 отзывов</a> / <a href="" onclick="$('a[href=\'#tab-review\']').trigger('click'); return false;">Написать отзыв</a>
+            </div>
+                      
+          <ul class="list-unstyled hidden">
+                                                <li>Наличие: В наличии</li>
+          </ul>
+                    <ul class="list-unstyled">
+                        <li>
+              <h2>16 000 сўм</h2>
+            </li>
+                                                          </ul>
+                    <div id="product">
+                        			
+            <div class="form-group">
+              <hr>
+              <div class="btn-quantity">
+                <input type="text" name="quantity" value="1" size="2" id="input-quantity" class="form-control" />
+                <span class="qty-plus"><i class="fa fa-plus"></i></span>
+                <span class="qty-minus"><i class="fa fa-minus"></i></span>
+              </div>
+              <input type="hidden" name="product_id" value="81" />
+              <button type="button" id="button-cart" data-loading-text="Загрузка..." class="btn btn-primary btn-lg">В корзину</button>
+            </div>
+			
+                      </div>
+		  
+		  		
+				  
+          
+          <div class="sharebox mb-4">
+            <hr>
+			<script src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+			<script src="//yastatic.net/share2/share.js"></script>
+			<div class="ya-share2" data-services="vkontakte,facebook,odnoklassniki,viber,whatsapp,telegram"></div>
+          </div>
+          
+        </div>
+      </div>
+	  <div class="row mb-4">
+		<div class="col-md-12">
+          <ul class="nav nav-tabs">
+            <li class="active"><a href="#tab-description" data-toggle="tab">Описание</a></li>
+            			                        <li><a href="#tab-review" data-toggle="tab">Отзывов (0)</a></li>
+                      </ul>
+          <div class="tab-content">
+            <div class="tab-pane active" id="tab-description"></div>
+            			                        <div class="tab-pane" id="tab-review">
+              <form class="form-horizontal" id="form-review">
+                <div id="review"></div>
+                <h2>Написать отзыв</h2>
+                                <div class="form-group required">
+                  <div class="col-sm-12">
+                    <label class="control-label" for="input-name">Ваше имя</label>
+                    <input type="text" name="name" value="" id="input-name" class="form-control" />
+                  </div>
+                </div>
+                <div class="form-group required">
+                  <div class="col-sm-12">
+                    <label class="control-label" for="input-review">Ваш отзыв</label>
+                    <textarea name="text" rows="5" id="input-review" class="form-control"></textarea>
+                    <div class="help-block"><span style="color: #FF0000;">Примечание:</span> HTML разметка не поддерживается! Используйте обычный текст.</div>
+                  </div>
+                </div>
+                <div class="form-group required">
+                  <div class="col-sm-12">
+                    <label class="control-label">Рейтинг</label>
+                    &nbsp;&nbsp;&nbsp; Плохо&nbsp;
+                    <input type="radio" name="rating" value="1" />
+                    &nbsp;
+                    <input type="radio" name="rating" value="2" />
+                    &nbsp;
+                    <input type="radio" name="rating" value="3" />
+                    &nbsp;
+                    <input type="radio" name="rating" value="4" />
+                    &nbsp;
+                    <input type="radio" name="rating" value="5" />
+                    &nbsp;Хорошо</div>
+                </div>
+                                <div class="buttons clearfix">
+                  <div class="pull-right">
+                    <button type="button" id="button-review" data-loading-text="Загрузка..." class="btn btn-primary">Продолжить</button>
+                  </div>
+                </div>
+                              </form>
+            </div>
+                      </div>
+		</div>
+	  </div>
+                  </div>
+    </div>
+</div>
+</div>
+<script type="text/javascript"><!--
+$('select[name=\'recurring_id\'], input[name="quantity"]').change(function(){
+	$.ajax({
+		url: 'index.php?route=product/product/getRecurringDescription',
+		type: 'post',
+		data: $('input[name=\'product_id\'], input[name=\'quantity\'], select[name=\'recurring_id\']'),
+		dataType: 'json',
+		beforeSend: function() {
+			$('#recurring-description').html('');
+		},
+		success: function(json) {
+			$('.alert, .text-danger').remove();
+
+			if (json['success']) {
+				$('#recurring-description').html(json['success']);
+			}
+		}
+	});
+});
+//--></script>
+<script type="text/javascript"><!--
+$('#button-cart').on('click', function() {
+	$.ajax({
+		url: 'index.php?route=checkout/cart/add',
+		type: 'post',
+		data: $('#product input[type=\'text\'], #product input[type=\'hidden\'], #product input[type=\'radio\']:checked, #product input[type=\'checkbox\']:checked, #product select, #product textarea'),
+		dataType: 'json',
+		beforeSend: function() {
+			$('#button-cart').button('loading');
+		},
+		complete: function() {
+			$('#button-cart').button('reset');
+		},
+		success: function(json) {
+			$('.alert, .text-danger').remove();
+			$('.form-group').removeClass('has-error');
+
+			if (json['error']) {
+				if (json['error']['option']) {
+					for (i in json['error']['option']) {
+						var element = $('#input-option' + i.replace('_', '-'));
+
+						if (element.parent().hasClass('input-group')) {
+							element.parent().after('<div class="text-danger">' + json['error']['option'][i] + '</div>');
+						} else {
+							element.after('<div class="text-danger">' + json['error']['option'][i] + '</div>');
+						}
+					}
+				}
+
+				if (json['error']['recurring']) {
+					$('select[name=\'recurring_id\']').after('<div class="text-danger">' + json['error']['recurring'] + '</div>');
+				}
+
+				// Highlight any found errors
+				$('.text-danger').parent().addClass('has-error');
+			}
+
+			if (json['success']) {
+				$('.breadcrumb').after('<div id="notification" class="alert alert-success"><i class="fa fa-check-circle"></i> ' + json['success'] + '<button type="button" class="close" data-dismiss="alert">&times;</button></div>');
+				setTimeout(function() {$('#notification').fadeOut(1000)},3000);
+				$('#cart-total').html(json['total']);
+				//$('#cart > button').html('<span id="cart-total"><i class="fa fa-shopping-cart"></i> ' + json['total'] + '</span>');
+
+				//$('html, body').animate({ scrollTop: 0 }, 'slow');
+
+				$('#cart > ul').load('index.php?route=common/cart/info ul li');
+			}
+		},
+        error: function(xhr, ajaxOptions, thrownError) {
+            alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
+        }
+	});
+});
+//--></script>
+<script type="text/javascript"><!--
+$('.date').datetimepicker({
+	pickTime: false
+});
+
+$('.datetime').datetimepicker({
+	pickDate: true,
+	pickTime: true
+});
+
+$('.time').datetimepicker({
+	pickDate: false
+});
+
+$('button[id^=\'button-upload\']').on('click', function() {
+	var node = this;
+
+	$('#form-upload').remove();
+
+	$('body').prepend('<form enctype="multipart/form-data" id="form-upload" style="display: none;"><input type="file" name="file" /></form>');
+
+	$('#form-upload input[name=\'file\']').trigger('click');
+
+	if (typeof timer != 'undefined') {
+    	clearInterval(timer);
+	}
+
+	timer = setInterval(function() {
+		if ($('#form-upload input[name=\'file\']').val() != '') {
+			clearInterval(timer);
+
+			$.ajax({
+				url: 'index.php?route=tool/upload',
+				type: 'post',
+				dataType: 'json',
+				data: new FormData($('#form-upload')[0]),
+				cache: false,
+				contentType: false,
+				processData: false,
+				beforeSend: function() {
+					$(node).button('loading');
+				},
+				complete: function() {
+					$(node).button('reset');
+				},
+				success: function(json) {
+					$('.text-danger').remove();
+
+					if (json['error']) {
+						$(node).parent().find('input').after('<div class="text-danger">' + json['error'] + '</div>');
+					}
+
+					if (json['success']) {
+						alert(json['success']);
+
+						$(node).parent().find('input').val(json['code']);
+					}
+				},
+				error: function(xhr, ajaxOptions, thrownError) {
+					alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
+				}
+			});
+		}
+	}, 500);
+});
+//--></script>
+<script type="text/javascript"><!--
+$('#review').delegate('.pagination a', 'click', function(e) {
+    e.preventDefault();
+
+    $('#review').fadeOut('slow');
+
+    $('#review').load(this.href);
+
+    $('#review').fadeIn('slow');
+});
+
+$('#review').load('index.php?route=product/product/review&product_id=81');
+
+$('#button-review').on('click', function() {
+	$.ajax({
+		url: 'index.php?route=product/product/write&product_id=81',
+		type: 'post',
+		dataType: 'json',
+		data: $("#form-review").serialize(),
+		beforeSend: function() {
+			$('#button-review').button('loading');
+		},
+		complete: function() {
+			$('#button-review').button('reset');
+		},
+		success: function(json) {
+			$('.alert-success, .alert-danger').remove();
+
+			if (json['error']) {
+				$('#review').after('<div class="alert alert-danger"><i class="fa fa-exclamation-circle"></i> ' + json['error'] + '</div>');
+			}
+
+			if (json['success']) {
+				$('#review').after('<div class="alert alert-success"><i class="fa fa-check-circle"></i> ' + json['success'] + '</div>');
+
+				$('input[name=\'name\']').val('');
+				$('textarea[name=\'text\']').val('');
+				$('input[name=\'rating\']:checked').prop('checked', false);
+			}
+		}
+	});
+});
+
+$(document).ready(function() {
+	$('.thumbnails').magnificPopup({
+		type:'image',
+		delegate: 'a',
+		gallery: {
+			enabled:true
+		}
+	});
+});
+//--></script>
+
+						
+			<script type="text/javascript">
+				
+				(function($){
+					
+					var lp_product_id = 0;
+											lp_product_id = 81;
+										
+					if ( lp_product_id ) {
+					
+						var params = {
+							'lp_settings' 				: {"animation":"1","multiplied_price":"1","discount_quantity":"0"},
+							'theme_name'					: 'default',
+							'product_id'					: lp_product_id,
+							'non_standard_theme' 	: '',
+							'get_custom_methods'	: ( typeof(liveprice_getCustomMethodsOfTheme) == 'function' ? liveprice_getCustomMethodsOfTheme : false ),
+						};
+						
+													// standard for most of themes
+							$container = $('body, div:first').first();
+												
+						
+						var liveprice = $container.liveopencart_LivePrice( params );
+						
+											}
+				})(jQuery);
+				
+			</script>
+				
+	
+						
+<footer>
+  <div class="footer-top">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-5 my-4">
+          <p><a href="/"><img class="footer-top__logo" src="/image/catalog/logo.png" width="180" height="74" alt="Халял Ресторан SHAFRAN"></a></p>
+          <p class="mb-1">Способы оплаты:</p>
+          <div class="footer-top__pay mb-3">
+            <div class="footer-top__pay-item"><img src="/image/payment/uzcard.png" width="120" height="22" alt=""></div>
+            <div class="footer-top__pay-item"><img src="/image/payment/payme.png" width="91" height="26" alt=""></div>
+          </div>
+          <p class="mb-1">Мы в социальных сетях:</p>
+          <div class="footer-top__social">
+            <a href="https://ok.ru/group/57884567732398" target="_blank" data-toggle="tooltip" title="" data-original-title="Odnoklassniki"><i class="fa fa-odnoklassniki"></i></a>
+            <a href="https://www.facebook.com/restoranshafran/" target="_blank" data-toggle="tooltip" title="" data-original-title="Facebook"><i class="fa fa-facebook"></i></a>
+            <a href="https://t.me/restoranshafran" target="_blank" data-toggle="tooltip" title="" data-original-title="Telegram"><i class="fa fa-telegram"></i></a>
+            <a href="https://www.instagram.com/shafran__bukhara/" target="_blank" data-toggle="tooltip" title="" data-original-title="Instagram"><i class="fa fa-instagram"></i></a>
+          </div>
+        </div>
+        <div class="col-md-4 my-4">
+          <hr class="visible-xs visible-sm">
+          <h4>Меню на доставку</h4>
+          <div class="row">
+            <div class="col-xs-12">
+              <ul class="list-unstyled">
+                <li><i class="fa fa-angle-right"></i> <a href="/fast-food/">Fast Food</a></li>
+                <li><i class="fa fa-angle-right"></i> <a href="/eda-iz-restorana/">Еда из Ресторана</a></li>
+                <li><i class="fa fa-angle-right"></i> <a href="/torti-i-pechennie/">Торты и печенные</a></li>
+                <li><i class="fa fa-angle-right"></i> <a href="/napitki-i-soki/">Напитки и Соки</a></li>
+              </ul>
+            </div>
+            <div class="col-xs-6 hidden">
+              <ul class="list-unstyled">
+                <li><i class="fa fa-angle-right"></i> <a href="#">Суши роллы</a></li>
+                <li><i class="fa fa-angle-right"></i> <a href="#">Выпечка</a></li>
+                <li><i class="fa fa-angle-right"></i> <a href="#">Салаты</a></li>
+                <li><i class="fa fa-angle-right"></i> <a href="#">Бизнес ланчи</a></li>
+              </ul>
+            </div>
+          </div>
+          <hr class="visible-xs visible-sm">
+        </div>
+        <div class="col-md-3 my-4">
+          <h4>Контакты</h4>
+          <div class="phone-item mb-3">
+            <img class="phone-item__icon" src="/image/catalog/icons/1.png" width="32" height="32" alt="Ресторан">
+            <div class="phone-item__body">
+              <small>Ресторан</small><br>
+              <a class="phone-item__num" href="tel:+998652236500">+998 65 223-65-00</a>
+            </div>
+          </div>
+          <div class="phone-item mb-3">
+            <img class="phone-item__icon" src="/image/catalog/icons/2.png" width="32" height="32" alt="Заказ + доставка">
+            <div class="phone-item__body">
+              <small>Заказ + доставка</small><br>
+              <a class="phone-item__num" href="tel:+998978606500">+998 97 860-65-00</a>
+            </div>
+          </div>
+          <div class="phone-item mb-3">
+            <img class="phone-item__icon" src="/image/catalog/icons/3.png" width="32" height="32" alt="Торты, Выпечка">
+            <div class="phone-item__body">
+              <small>Торты, Выпечка</small><br>
+              <a class="phone-item__num" href="tel:+998978556500">+998 97 855-65-00</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="scrollup">
+      <i class="fa fa-angle-up"></i>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <div class="footer-bottom-copyright">Халял Ресторан &quot;SHAFRAN&quot; в Бухаре &copy; 2025<br><a href="https://www.elit.uz/shop.php" target="_blank">Создание интернет магазинов в Бухаре</a></div>
+      <div class="footer-bottom-counter hidden-xs">
+        <!-- Yandex.Metrika informer --> <a href="https://metrika.yandex.ru/stat/?id=62969113&amp;from=informer" target="_blank" rel="nofollow"><img src="https://informer.yandex.ru/informer/62969113/3_1_FFFFFFFF_EFEFEFFF_0_pageviews" style="width:88px; height:31px; border:0;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" class="ym-advanced-informer" data-cid="62969113" data-lang="ru" /></a> <!-- /Yandex.Metrika informer --> <!-- Yandex.Metrika counter --> <script type="text/javascript" > (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym(62969113, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/62969113" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body></html>

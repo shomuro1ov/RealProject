@@ -80,188 +80,37 @@
     </section>
 
     <!-- Menu Section -->
-    <section class="menu" id="menu">
-      <div class="container">
-        <h2>Our Menu</h2>
-        <div class="menu-categories">
-          <button class="category-btn active" data-category="all">
-            All Items
-          </button>
-          <button class="category-btn" data-category="burgers">Burgers</button>
-          <button class="category-btn" data-category="fries">
-            Fries & Sides
-          </button>
-          <button class="category-btn" data-category="drinks">Drinks</button>
-          <button class="category-btn" data-category="desserts">
-            Desserts
-          </button>
-        </div>
+<section class="menu" id="menu">
+  <div class="menu-container">
+    <h2 class="menu-title">Our Menu</h2>
 
-        <!-- Menu Carousel -->
-        <div class="menu-carousel">
-          <div class="carousel-arrow prev">
-            <i class="fas fa-chevron-left"></i>
-          </div>
-          <div class="carousel-arrow next">
-            <i class="fas fa-chevron-right"></i>
-          </div>
+    <div class="menu-categories">
+      <button class="menu-category-btn active" data-category="lavash">Lavashlar</button>
+      <button class="menu-category-btn" data-category="burgers">Bamburgerlar</button>
+      <button class="menu-category-btn" data-category="chesse">Cheselar</button>
+      <button class="menu-category-btn" data-category="drinks">Suvlar</button>
+      <button class="menu-category-btn" data-category="desserts">Shirinliklar</button>
+    </div>
 
-          <div class="menu-carousel-container">
-            <!-- Slide 1 - Burgers -->
-            <div class="menu-carousel-item">
-              <div class="menu-item" data-item="1">
-                <div class="menu-item-img">
-                  <i class="fas fa-hamburger"></i>
-                </div>
-                <div class="menu-item-content">
-                  <div class="menu-item-title">
-                    <h3>Classic Cheeseburger</h3>
-                    <span class="price">$8.99</span>
-                  </div>
-                  <p>
-                    Juicy beef patty with melted cheese, fresh lettuce, tomato,
-                    and our special sauce.
-                  </p>
-                </div>
-              </div>
-              <div class="menu-item" data-item="2">
-                <div class="menu-item-img">
-                  <i class="fas fa-bacon"></i>
-                </div>
-                <div class="menu-item-content">
-                  <div class="menu-item-title">
-                    <h3>Bacon Deluxe</h3>
-                    <span class="price">$10.99</span>
-                  </div>
-                  <p>
-                    Double beef patty with crispy bacon, cheddar cheese, and
-                    smoky BBQ sauce.
-                  </p>
-                </div>
-              </div>
-              <div class="menu-item" data-item="3">
-                <div class="menu-item-img">
-                  <i class="fas fa-cheese"></i>
-                </div>
-                <div class="menu-item-content">
-                  <div class="menu-item-title">
-                    <h3>Mushroom Swiss</h3>
-                    <span class="price">$9.99</span>
-                  </div>
-                  <p>
-                    Beef patty topped with sautéed mushrooms and melted Swiss
-                    cheese.
-                  </p>
-                </div>
-              </div>
-            </div>
+    <div class="menu-grid" id="menuGrid"></div>
+  </div>
 
-            <!-- Slide 2 - Fries & Sides -->
-            <div class="menu-carousel-item">
-              <div class="menu-item" data-item="4">
-                <div class="menu-item-img">
-                  <i class="fas fa-french-fries"></i>
-                </div>
-                <div class="menu-item-content">
-                  <div class="menu-item-title">
-                    <h3>Classic Fries</h3>
-                    <span class="price">$3.99</span>
-                  </div>
-                  <p>
-                    Golden crispy fries seasoned with our special blend of
-                    spices.
-                  </p>
-                </div>
-              </div>
-              <div class="menu-item" data-item="5">
-                <div class="menu-item-img">
-                  <i class="fas fa-cheese"></i>
-                </div>
-                <div class="menu-item-content">
-                  <div class="menu-item-title">
-                    <h3>Cheese Fries</h3>
-                    <span class="price">$5.99</span>
-                  </div>
-                  <p>
-                    Our classic fries topped with melted cheese sauce and crispy
-                    bacon bits.
-                  </p>
-                </div>
-              </div>
-              <div class="menu-item" data-item="6">
-                <div class="menu-item-img">
-                  <i class="fas fa-bread-slice"></i>
-                </div>
-                <div class="menu-item-content">
-                  <div class="menu-item-title">
-                    <h3>Garlic Bread</h3>
-                    <span class="price">$4.99</span>
-                  </div>
-                  <p>
-                    Toasted bread with garlic butter and herbs, served with
-                    marinara sauce.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Slide 3 - Drinks & Desserts -->
-            <div class="menu-carousel-item">
-              <div class="menu-item" data-item="7">
-                <div class="menu-item-img">
-                  <i class="fas fa-beer"></i>
-                </div>
-                <div class="menu-item-content">
-                  <div class="menu-item-title">
-                    <h3>Fresh Lemonade</h3>
-                    <span class="price">$2.99</span>
-                  </div>
-                  <p>
-                    Freshly squeezed lemons with just the right amount of
-                    sweetness.
-                  </p>
-                </div>
-              </div>
-              <div class="menu-item" data-item="8">
-                <div class="menu-item-img">
-                  <i class="fas fa-ice-cream"></i>
-                </div>
-                <div class="menu-item-content">
-                  <div class="menu-item-title">
-                    <h3>Chocolate Shake</h3>
-                    <span class="price">$4.99</span>
-                  </div>
-                  <p>
-                    Rich, creamy chocolate milkshake topped with whipped cream.
-                  </p>
-                </div>
-              </div>
-              <div class="menu-item" data-item="9">
-                <div class="menu-item-img">
-                  <i class="fas fa-cookie"></i>
-                </div>
-                <div class="menu-item-content">
-                  <div class="menu-item-title">
-                    <h3>Cookie Sundae</h3>
-                    <span class="price">$5.99</span>
-                  </div>
-                  <p>
-                    Warm chocolate chip cookie topped with vanilla ice cream and
-                    hot fudge.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="carousel-nav">
-            <div class="carousel-dot active" data-slide="0"></div>
-            <div class="carousel-dot" data-slide="1"></div>
-            <div class="carousel-dot" data-slide="2"></div>
-          </div>
-        </div>
+  <!-- Popup (Modal) -->
+  <div class="menu-modal" id="menuModal">
+    <div class="menu-modal-content">
+      <span class="menu-modal-close" id="closeModal">&times;</span>
+      <div class="menu-modal-body">
+        <img id="modalImage" class="menu-modal-img" alt="">
+        <h3 class="menu-modal-body-title" id="modalTitle"></h3>
+        <p class="menu-modal-body-desc" id="modalDescription"></p>
+        <h4 class="menu-modal-body-subtitle">Ingredients:</h4>
+        <ul class="menu-modal-body-list" id="modalIngredients"></ul>
+        <p class="menu-modal-body-nutrition" id="modalNutrition"></p>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
+
 
     <!-- Gallery Section -->
     <section class="gallery" id="gallery">

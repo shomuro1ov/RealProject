@@ -33,38 +33,7 @@
             });
         });
 
-        // Menu Carousel
-        const menuCarousel = document.querySelector('.menu-carousel-container');
-        const menuDots = document.querySelectorAll('.carousel-dot');
-        const menuPrev = document.querySelector('.menu-carousel .prev');
-        const menuNext = document.querySelector('.menu-carousel .next');
-        let menuCurrentSlide = 0;
 
-        function updateMenuCarousel() {
-            menuCarousel.style.transform = `translateX(-${menuCurrentSlide * 100}%)`;
-            
-            // Update dots
-            menuDots.forEach((dot, index) => {
-                dot.classList.toggle('active', index === menuCurrentSlide);
-            });
-        }
-
-        menuPrev.addEventListener('click', () => {
-            menuCurrentSlide = (menuCurrentSlide - 1 + menuDots.length) % menuDots.length;
-            updateMenuCarousel();
-        });
-
-        menuNext.addEventListener('click', () => {
-            menuCurrentSlide = (menuCurrentSlide + 1) % menuDots.length;
-            updateMenuCarousel();
-        });
-
-        menuDots.forEach((dot, index) => {
-            dot.addEventListener('click', () => {
-                menuCurrentSlide = index;
-                updateMenuCarousel();
-            });
-        });
 
         // Gallery Carousel
         const galleryCarousel = document.querySelector('.gallery-carousel-container');
@@ -115,211 +84,118 @@
         const modalClose = document.querySelector('.modal-close');
         const menuItems = document.querySelectorAll('.menu-item');
 
-        // Menu item data
-        const menuItemData = {
-            1: {
-                title: "Classic Cheeseburger",
-                price: "$8.99",
-                description: "Juicy beef patty with melted cheese, fresh lettuce, tomato, and our special sauce.",
-                icon: "fa-hamburger",
-                ingredients: [
-                    "100% Angus beef patty",
-                    "American cheese",
-                    "Fresh lettuce",
-                    "Ripe tomato",
-                    "Red onion",
-                    "Pickles",
-                    "Special sauce",
-                    "Sesame seed bun"
-                ],
-                nutrition: "Calories: 650 | Protein: 35g | Carbs: 45g | Fat: 35g"
-            },
-            2: {
-                title: "Bacon Deluxe",
-                price: "$10.99",
-                description: "Double beef patty with crispy bacon, cheddar cheese, and smoky BBQ sauce.",
-                icon: "fa-bacon",
-                ingredients: [
-                    "Two 100% Angus beef patties",
-                    "Crispy bacon strips",
-                    "Cheddar cheese",
-                    "Caramelized onions",
-                    "Fresh lettuce",
-                    "Smoky BBQ sauce",
-                    "Toasted brioche bun"
-                ],
-                nutrition: "Calories: 850 | Protein: 45g | Carbs: 50g | Fat: 45g"
-            },
-            3: {
-                title: "Mushroom Swiss",
-                price: "$9.99",
-                description: "Beef patty topped with sautéed mushrooms and melted Swiss cheese.",
-                icon: "fa-cheese",
-                ingredients: [
-                    "100% Angus beef patty",
-                    "Sautéed mushrooms",
-                    "Swiss cheese",
-                    "Caramelized onions",
-                    "Arugula",
-                    "Garlic aioli",
-                    "Toasted artisan bun"
-                ],
-                nutrition: "Calories: 720 | Protein: 38g | Carbs: 48g | Fat: 38g"
-            },
-            4: {
-                title: "Classic Fries",
-                price: "$3.99",
-                description: "Golden crispy fries seasoned with our special blend of spices.",
-                icon: "fa-french-fries",
-                ingredients: [
-                    "Premium potatoes",
-                    "Sea salt",
-                    "Black pepper",
-                    "Paprika",
-                    "Garlic powder",
-                    "Served with ketchup"
-                ],
-                nutrition: "Calories: 320 | Protein: 4g | Carbs: 45g | Fat: 14g"
-            },
-            5: {
-                title: "Cheese Fries",
-                price: "$5.99",
-                description: "Our classic fries topped with melted cheese sauce and crispy bacon bits.",
-                icon: "fa-cheese",
-                ingredients: [
-                    "Classic fries",
-                    "Melted cheese sauce",
-                    "Crispy bacon bits",
-                    "Chopped green onions",
-                    "Sour cream (optional)"
-                ],
-                nutrition: "Calories: 580 | Protein: 15g | Carbs: 48g | Fat: 35g"
-            },
-            6: {
-                title: "Garlic Bread",
-                price: "$4.99",
-                description: "Toasted bread with garlic butter and herbs, served with marinara sauce.",
-                icon: "fa-bread-slice",
-                ingredients: [
-                    "Artisan bread",
-                    "Garlic butter",
-                    "Italian herbs",
-                    "Parmesan cheese",
-                    "Fresh parsley",
-                    "Marinara dipping sauce"
-                ],
-                nutrition: "Calories: 280 | Protein: 8g | Carbs: 35g | Fat: 12g"
-            },
-            7: {
-                title: "Fresh Lemonade",
-                price: "$2.99",
-                description: "Freshly squeezed lemons with just the right amount of sweetness.",
-                icon: "fa-beer",
-                ingredients: [
-                    "Freshly squeezed lemon juice",
-                    "Pure cane sugar",
-                    "Filtered water",
-                    "Ice",
-                    "Lemon slices for garnish"
-                ],
-                nutrition: "Calories: 120 | Protein: 0g | Carbs: 32g | Fat: 0g"
-            },
-            8: {
-                title: "Chocolate Shake",
-                price: "$4.99",
-                description: "Rich, creamy chocolate milkshake topped with whipped cream.",
-                icon: "fa-ice-cream",
-                ingredients: [
-                    "Premium vanilla ice cream",
-                    "Chocolate syrup",
-                    "Milk",
-                    "Whipped cream",
-                    "Chocolate shavings",
-                    "Maraschino cherry"
-                ],
-                nutrition: "Calories: 420 | Protein: 8g | Carbs: 55g | Fat: 18g"
-            },
-            9: {
-                title: "Cookie Sundae",
-                price: "$5.99",
-                description: "Warm chocolate chip cookie topped with vanilla ice cream and hot fudge.",
-                icon: "fa-cookie",
-                ingredients: [
-                    "Warm chocolate chip cookie",
-                    "Vanilla ice cream",
-                    "Hot fudge sauce",
-                    "Whipped cream",
-                    "Chopped nuts",
-                    "Maraschino cherry"
-                ],
-                nutrition: "Calories: 580 | Protein: 6g | Carbs: 75g | Fat: 28g"
-            }
-        };
+        //  kjasbdfkaksvkhsahvksadfhvkkjsvkhsda
+const menuData = {
+  lavash: [
+    {
+      title: "Tovuq Lavash",
+      price: "$5.99",
+      img: "images/lavash1.jpg.webg",
+      description: "Yumshoq non orasida tovuq go'shti, sabzavotlar va maxsus sous bilan.",
+      ingredients: ["Tovuq go'shti", "Pomidor", "Bodring", "Sous", "Pishloq"],
+      nutrition: "Calories: 520 | Protein: 26g | Carbs: 45g | Fat: 20g"
+    },
+    {
+      title: "Go'shtli Lavash",
+      price: "$6.99",
+      img: "images/lavash2.jpg",
+      description: "Mol go'shti, pishloq va sabzavotlar bilan to'ldirilgan lavash.",
+      ingredients: ["Mol go'shti", "Pishloq", "Karam", "Sous"],
+      nutrition: "Calories: 640 | Protein: 32g | Carbs: 50g | Fat: 28g"
+    }
+  ],
+  burgers: [
+    {
+      title: "Classic Burger",
+      price: "$7.99",
+      img: "images/burger1.jpg",
+      description: "100% mol go'shtli burger pishloq, sabzavot va sous bilan.",
+      ingredients: ["Mol go'shti", "Pishloq", "Pomidor", "Sous"],
+      nutrition: "Calories: 700 | Protein: 40g | Carbs: 55g | Fat: 35g"
+    },
+    {
+      title: "Double Burger",
+      price: "$9.99",
+      img: "images/burger2.jpg",
+      description: "Ikki qavatli burger, cheddar pishloq va maxsus sous bilan.",
+      ingredients: ["2x Go'shtli kotlet", "Cheddar", "Sous"],
+      nutrition: "Calories: 890 | Protein: 55g | Carbs: 60g | Fat: 45g"
+    }
+  ],
+  drinks: [
+    {
+      title: "Coca-Cola",
+      price: "$1.99",
+      img: "images/cola.jpg",
+      description: "Muzdek gazli ichimlik.",
+      ingredients: ["Suv", "Shakar", "Gaz"],
+      nutrition: "Calories: 140 | Carbs: 39g"
+    },
+    {
+      title: "Lemonade",
+      price: "$2.49",
+      img: "images/lemonade.jpg",
+      description: "Tabiiy limon sharbatidan tayyorlangan ichimlik.",
+      ingredients: ["Limon", "Shakar", "Suv"],
+      nutrition: "Calories: 120 | Carbs: 32g"
+    }
+  ]
+};
 
-        // Open modal when menu item is clicked
-        menuItems.forEach(item => {
-            item.addEventListener('click', () => {
-                const itemId = item.getAttribute('data-item');
-                const itemData = menuItemData[itemId];
-                
-                if (itemData) {
-                    document.getElementById('modal-title').textContent = itemData.title;
-                    document.getElementById('modal-price').textContent = itemData.price;
-                    document.getElementById('modal-description').textContent = itemData.description;
-                    document.getElementById('modal-icon').className = `fas ${itemData.icon}`;
-                    
-                    const ingredientsList = document.getElementById('modal-ingredients');
-                    ingredientsList.innerHTML = '';
-                    itemData.ingredients.forEach(ingredient => {
-                        const li = document.createElement('li');
-                        li.textContent = ingredient;
-                        ingredientsList.appendChild(li);
-                    });
-                    
-                    document.getElementById('modal-nutrition').textContent = itemData.nutrition;
-                    
-                    modal.classList.add('active');
-                    document.body.style.overflow = 'hidden';
-                }
-            });
-        });
+// Elementlar
+const grid = document.getElementById("menuGrid");
+const modalmenu = document.getElementById("menuModal");
+const closeModal = document.getElementById("closeModal");
+const modalImage = document.getElementById("modalImage");
+const modalTitle = document.getElementById("modalTitle");
+const modalDescription = document.getElementById("modalDescription");
+const modalIngredients = document.getElementById("modalIngredients");
+const modalNutrition = document.getElementById("modalNutrition");
 
-        // Close modal
-        modalClose.addEventListener('click', () => {
-            modal.classList.remove('active');
-            document.body.style.overflow = 'auto';
-        });
+// Funksiya: menyuni ko‘rsatish
+function showMenu(category) {
+  grid.innerHTML = "";
+  menuData[category].forEach(item => {
+    const div = document.createElement("div");
+    div.classList.add("menu-item");
+    div.innerHTML = `
+      <img src="${item.img}" alt="${item.title}" class="menu-item-img">
+      <h3 class="menu-item-name">${item.title}</h3>
+      <p class="menu-item-price">${item.price}</p>
+    `;
+    div.addEventListener("click", () => openModal(item));
+    grid.appendChild(div);
+  });
+}
 
-        // Close modal when clicking outside
-        modal.addEventListener('click', (e) => {
-            if (e.target === modal) {
-                modal.classList.remove('active');
-                document.body.style.overflow = 'auto';
-            }
-        });
+// Modalni ochish
+function openModal(item) {
+  modalImage.src = item.img;
+  modalTitle.textContent = item.title;
+  modalDescription.textContent = item.description;
+  modalIngredients.innerHTML = item.ingredients.map(i => `<li>${i}</li>`).join("");
+  modalNutrition.textContent = item.nutrition;
+  modal.style.display = "flex";
+}
 
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                if(targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                if(targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                    
-                    // Close mobile menu if open
-                    document.querySelector('.nav-links').classList.remove('active');
-                    document.querySelector('.mobile-menu i').classList.add('fa-bars');
-                    document.querySelector('.mobile-menu i').classList.remove('fa-times');
-                }
-            });
-        });
+// Yopish
+closeModal.addEventListener("click", () => modalmenu.style.display = "none");
+window.addEventListener("click", e => {
+  if (e.target === modalmenu) modalmenu.style.display = "none";
+});
+
+// Kategoriya bosilganda
+document.querySelectorAll(".menu-category-btn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    document.querySelectorAll(".menu-category-btn").forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+    showMenu(btn.dataset.category);
+  });
+});
+
+// Default - lavashlar
+showMenu("lavash");
+// =================================================================================================================================
 
         // Add floating elements to hero section
         function createFloatingElement() {
