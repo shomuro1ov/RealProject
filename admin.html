@@ -1,100 +1,103 @@
 <!DOCTYPE html>
 <html lang="uz">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Menga Cafe - Admin Panel</title>
-    <link rel="stylesheet" href="admin.css" />
-  </head>
-  <body>
-    <div class="container">
-      <header>
-        <h1>Menga Cafe - Admin Panel</h1>
-        <p>Mahsulotlarni boshqarish</p>
-        <a href="index.html" class="admin-link">Menyuga Qaytish</a>
-      </header>
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Panel</title>
+  <style>
+    form { margin-bottom: 20px; }
+    input, textarea { display: block; margin: 5px 0; padding: 5px; width: 250px; }
+    button { margin-top: 10px; }
+    .item { border: 1px solid #aaa; padding: 10px; margin: 5px; border-radius: 8px; }
+  </style>
+</head>
+<body>
+  <h1>🔧 Menu boshqaruvi</h1>
 
-      <div class="admin-panel">
-        <div class="admin-section">
-          <h3>Kategoriya Qo'shish</h3>
-          <div class="form-group">
-            <label for="categoryName">Kategoriya Nomi</label>
-            <input
-              type="text"
-              id="categoryName"
-              class="form-control"
-              placeholder="Masalan: Hot Doglar"
-            />
-          </div>
-          <button class="btn" id="addCategoryBtn">Kategoriya Qo'shish</button>
-        </div>
+  <form id="menuForm">
+    <input type="hidden" id="id">
+    <input type="text" id="name" placeholder="Taom nomi" required>
+    <input type="number" id="price" placeholder="Narxi" required>
+    <input type="text" id="category" placeholder="Kategoriya">
+    <textarea id="description" placeholder="Tavsif"></textarea>
+    <input type="text" id="image" placeholder="Rasm URL">
+    <button type="submit">Saqlash</button>
+  </form>
 
-        <div class="admin-section">
-          <h3>Mahsulot Qo'shish</h3>
-          <div class="form-group">
-            <label for="productName">Mahsulot Nomi</label>
-            <input
-              type="text"
-              id="productName"
-              class="form-control"
-              placeholder="Masalan: Klassik Hot Dog"
-            />
-          </div>
-          <div class="form-group">
-            <label for="productPrice">Narxi</label>
-            <input
-              type="text"
-              id="productPrice"
-              class="form-control"
-              placeholder="Masalan: 18,000 so'm"
-            />
-          </div>
-          <div class="form-group">
-            <label for="productCategory">Kategoriya</label>
-            <select id="productCategory" class="form-control">
-              <!-- Categories will be populated by JavaScript -->
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="productImage">Rasm URL</label>
-            <input
-              type="text"
-              id="productImage"
-              class="form-control"
-              placeholder="Rasm manzilini kiriting"
-            />
-          </div>
-          <div class="form-group">
-            <label for="productDescription">Tavsif</label>
-            <textarea
-              id="productDescription"
-              class="form-control"
-              rows="3"
-              placeholder="Mahsulot haqida qisqacha tavsif"
-            ></textarea>
-          </div>
-          <button class="btn" id="addProductBtn">Mahsulot Qo'shish</button>
-        </div>
+  <h2>Joriy taomlar:</h2>
+  <div id="menu-list"></div>
 
-        <div class="admin-section">
-          <h3>Mavjud Mahsulotlar</h3>
-          <div class="items-list" id="productsList">
-            <!-- Products will be loaded from localStorage -->
+  <script>
+    const apiUrl = "http://localhost:5000/api/menu";
+
+    async function loadMenu() {
+      const res = await fetch(apiUrl);
+      const data = await res.json();
+      const container = document.getElementById("menu-list");
+      container.innerHTML = "";
+      data.forEach(item => {
+        container.innerHTML += `
+          <div class="item">
+            <b>${item.name}</b> - ${item.price} so'm
+            <button onclick="editItem(${item.id})">✏️</button>
+            <button onclick="deleteItem(${item.id})">🗑️</button>
           </div>
-        </div>
+        `;
+      });
+    }
 
-        <div class="admin-section">
-          <h3>Ma'lumotlarni Boshqarish</h3>
-          <button class="btn btn-secondary" id="exportDataBtn">
-            Ma'lumotlarni Yuklab Olish
-          </button>
-          <button class="btn btn-danger" id="resetDataBtn">
-            Barcha Ma'lumotlarni O'chirish
-          </button>
-        </div>
-      </div>
-    </div>
+    async function deleteItem(id) {
+      if (!confirm("O‘chirishni tasdiqlaysizmi?")) return;
+      await fetch(`${apiUrl}/${id}`, { method: "DELETE" });
+      loadMenu();
+    }
 
-    <script src="admin.js"></script>
-  </body>
+    async function editItem(id) {
+      const res = await fetch(apiUrl);
+      const data = await res.json();
+      const item = data.find(i => i.id === id);
+      document.getElementById("id").value = item.id;
+      document.getElementById("name").value = item.name;
+      document.getElementById("price").value = item.price;
+      document.getElementById("category").value = item.category;
+      document.getElementById("description").value = item.description;
+      document.getElementById("image").value = item.image;
+    }
+
+    document.getElementById("menuForm").addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const id = document.getElementById("id").value;
+      const item = {
+        name: name.value,
+        price: Number(price.value),
+        category: category.value,
+        description: description.value,
+        image: image.value
+      };
+
+      if (id) {
+        await fetch(`${apiUrl}/${id}`, {
+          method: "PUT",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(item)
+        });
+      } else {
+        await fetch(apiUrl, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(item)
+        });
+      }
+
+      e.target.reset();
+      loadMenu();
+    });
+
+    loadMenu();
+    const token = localStorage.getItem("token");
+    if (!token) {
+      window.location.href = "admin.html"; // login sahifaga yo'naltirish
+    }
+ 
+  </script>
+</body>
 </html>

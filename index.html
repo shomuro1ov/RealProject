@@ -31,47 +31,9 @@
           <li><a href="#gallery">Gallery</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#contact">Contact</a></li>
-          <!-- Admin kirish tugmasi -->
-          <li>
-            <a href="#" id="adminLoginBtn" class="admin-login-btn">
-              <i class="fas fa-lock"></i> Admin
-            </a>
-          </li>
         </ul>
       </div>
     </header>
-
-    <!-- ajsdghasiudghaisughdiashdhashdihas -->
-    <!-- Admin Login Modal -->
-    <div class="admin-login-modal" id="adminLoginModal">
-      <div class="admin-login-content">
-        <span class="close-admin-modal">&times;</span>
-        <h3>Admin Panelga Kirish</h3>
-        <form id="adminLoginForm">
-          <div class="form-group">
-            <label>Login:</label>
-            <input
-              type="text"
-              id="adminUsername"
-              placeholder="admin"
-              required
-            />
-          </div>
-          <div class="form-group">
-            <label>Parol:</label>
-            <input
-              type="password"
-              id="adminPassword"
-              placeholder="••••••••"
-              required
-            />
-          </div>
-          <button type="submit" class="btn">Kirish</button>
-          <p class="admin-hint">Default: admin / admin123</p>
-        </form>
-      </div>
-    </div>
-
     <!-- Hero Section -->
     <section class="hero" id="home">
       <div class="floating-elements">
@@ -115,53 +77,34 @@
         <a href="#menu" class="btn">View Our Menu</a>
       </div>
     </section>
+<!-- Menu section -->
+ <section class="menu" id="menu">
+  <div class="menu-container">
+    <h2 class="menu-title">Our Menu</h2>
 
-    <!-- Menu Section -->
-    <section class="menu" id="menu">
-      <div class="menu-container">
-        <h2 class="menu-title">Our Menu</h2>
+  <div class="menu-categories">
+  <!-- Kategoriyalar API orqali JS tomonidan yuklanadi -->
+</div>
 
-        <!-- Menga Cafe Menu Categories -->
-        <div class="menu-categories">
-          <button class="menu-category-btn active" data-category="all">
-            Hammasi
-          </button>
-          <button class="menu-category-btn" data-category="lavash">
-            Lavashlar
-          </button>
-          <button class="menu-category-btn" data-category="burgers">
-            Bamburgerlar
-          </button>
-          <button class="menu-category-btn" data-category="chesse">
-            Cheselar
-          </button>
-          <button class="menu-category-btn" data-category="drinks">
-            Suvlar
-          </button>
-          <button class="menu-category-btn" data-category="desserts">
-            Shirinliklar
-          </button>
-        </div>
+    <div class="menu-grid" id="menuGrid">
+      <!-- JS orqali yuklanadi -->
+    </div>
+  </div>
 
-        <!-- Menga Cafe Menu Grid -->
-        <div class="menu-grid" id="menuGrid">
-          <!-- Menu items will be loaded here -->
-        </div>
+  <!-- Modal -->
+  <div class="menu-modal" id="menuModal">
+    <div class="menu-modal-content">
+      <span class="menu-modal-close" id="closeModal">&times;</span>
+      <div class="menu-modal-body">
+        <img id="modalImage" class="menu-modal-img" alt="Menu image" />
+        <h3 id="modalTitle" class="menu-modal-body-title"></h3>
+        <p id="modalPrice" class="menu-modal-body-price"></p>
+        <p id="modalDescription" class="menu-modal-body-desc"></p>
       </div>
+    </div>
+  </div>
+</section>
 
-      <!-- Menga Cafe Popup (Modal) -->
-      <div class="menu-modal" id="menuModal">
-        <div class="menu-modal-content">
-          <span class="menu-modal-close" id="closeModal">&times;</span>
-          <div class="menu-modal-body">
-            <img id="modalImage" class="menu-modal-img" alt="" />
-            <h3 class="menu-modal-body-title" id="modalTitle"></h3>
-            <p class="menu-modal-body-price" id="modalPrice"></p>
-            <p class="menu-modal-body-desc" id="modalDescription"></p>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <!-- Gallery Section -->
     <section class="gallery" id="gallery">
@@ -393,53 +336,6 @@
         </div>
       </div>
     </footer>
-
-    <!-- Menu Item Modal -->
-    <div class="modal" id="itemModal">
-      <div class="modal-content">
-        <button class="modal-close">
-          <i class="fas fa-times"></i>
-        </button>
-        <div class="modal-body">
-          <div class="modal-item">
-            <div class="modal-item-image">
-              <i class="fas fa-hamburger" id="modal-icon"></i>
-            </div>
-            <div class="modal-item-details">
-              <div class="modal-item-title">
-                <h2 id="modal-title">Classic Cheeseburger</h2>
-                <div class="modal-price" id="modal-price">$8.99</div>
-              </div>
-              <p id="modal-description">
-                Juicy beef patty with melted cheese, fresh lettuce, tomato, and
-                our special sauce.
-              </p>
-
-              <div class="modal-ingredients">
-                <h3>Ingredients</h3>
-                <ul id="modal-ingredients">
-                  <li>100% Angus beef patty</li>
-                  <li>American cheese</li>
-                  <li>Fresh lettuce</li>
-                  <li>Ripe tomato</li>
-                  <li>Red onion</li>
-                  <li>Pickles</li>
-                  <li>Special sauce</li>
-                  <li>Sesame seed bun</li>
-                </ul>
-              </div>
-
-              <div class="modal-nutrition">
-                <h3>Nutrition Information</h3>
-                <p id="modal-nutrition">
-                  Calories: 650 | Protein: 35g | Carbs: 45g | Fat: 35g
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
 
     <script src="./app.js"></script>
   </body>

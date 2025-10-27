@@ -1206,88 +1206,98 @@ footer:before {
 
 .menu-title {
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #222;
   margin-bottom: 40px;
-  color: #333;
+  position: relative;
+}
+
+.menu-title::after {
+  content: "";
+  width: 70px;
+  height: 4px;
+  background: var(--accent);
+  display: block;
+  margin: 10px auto 0;
+  border-radius: 2px;
 }
 
 .menu-categories {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 15px;
-  margin-bottom: 40px;
+  gap: 12px;
+  margin-bottom: 50px;
 }
 
 .menu-category-btn {
-  padding: 12px 24px;
-  background-color: #f8f9fa;
-  border: 2px solid #e9ecef;
-  border-radius: 25px;
+  padding: 12px 26px;
+  background: #f4f4f4;
+  border: 1.5px solid #ddd;
+  border-radius: 30px;
   cursor: pointer;
   font-weight: 600;
+  color: #444;
   transition: all 0.3s ease;
-  color: #333;
 }
 
-.menu-category-btn.active,
-.menu-category-btn:hover {
-  background-color: var(--accent);
+.menu-category-btn:hover,
+.menu-category-btn.active {
+  background: var(--accent);
   color: white;
   border-color: var(--accent);
 }
 
 .menu-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 25px;
+  justify-content: center; /* markazga joylashadi */
 }
 
 .menu-item {
-  background: white;
-  border-radius: 15px;
+  background: #fff;
+  border-radius: 18px;
   overflow: hidden;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease;
-  cursor: pointer;
+  text-align: center;
+  padding-bottom: 20px;
 }
 
 .menu-item:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
 }
 
-.menu-item-img {
+.menu-item img {
   width: 100%;
-  height: 200px;
+  height: 220px;
   object-fit: cover;
+  border-bottom: 1px solid #eee;
 }
 
-.menu-item-content {
-  padding: 20px;
-}
-
-.menu-item-title {
+.menu-item h3 {
+  margin-top: 18px;
   font-size: 1.3rem;
-  font-weight: 600;
-  margin-bottom: 10px;
-  color: #333;
+  color: #222;
 }
 
-.menu-item-price {
-  color: var(--accent);
-  font-weight: 700;
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-}
-
-.menu-item-desc {
+.menu-item p {
+  font-size: 0.95rem;
   color: #666;
-  line-height: 1.5;
-  font-size: 0.9rem;
+  padding: 0 15px;
+  margin: 8px 0;
 }
 
-/* Menga Cafe Modal Styles */
+.menu-item .price {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--accent);
+}
+
+/* Modal */
 .menu-modal {
   display: none;
   position: fixed;
@@ -1295,45 +1305,35 @@ footer:before {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.75);
   z-index: 1000;
-  opacity: 0;
+  justify-content: center;
+  align-items: center;
   transition: opacity 0.3s ease;
 }
 
 .menu-modal.active {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 1;
 }
 
 .menu-modal-content {
   background: white;
-  border-radius: 20px;
+  border-radius: 15px;
+  max-width: 480px;
   width: 90%;
-  max-width: 500px;
+  padding: 25px;
+  text-align: center;
   position: relative;
-  transform: scale(0.8);
-  transition: transform 0.3s ease;
-}
-
-.menu-modal.active .menu-modal-content {
-  transform: scale(1);
+  animation: fadeIn 0.3s ease;
 }
 
 .menu-modal-close {
   position: absolute;
-  top: 15px;
-  right: 20px;
-  font-size: 2rem;
+  top: 10px;
+  right: 18px;
+  font-size: 1.8rem;
   cursor: pointer;
   color: #333;
-  z-index: 1;
-}
-
-.menu-modal-body {
-  padding: 30px;
 }
 
 .menu-modal-img {
@@ -1341,93 +1341,44 @@ footer:before {
   height: 250px;
   object-fit: cover;
   border-radius: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .menu-modal-body-title {
-  font-size: 1.8rem;
-  margin-bottom: 10px;
-  color: #333;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #222;
 }
 
 .menu-modal-body-price {
   color: var(--accent);
   font-weight: 700;
-  font-size: 1.4rem;
-  margin-bottom: 15px;
+  font-size: 1.2rem;
+  margin: 10px 0;
 }
 
 .menu-modal-body-desc {
-  color: #666;
-  line-height: 1.6;
+  color: #555;
   font-size: 1rem;
+  line-height: 1.6;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .menu-grid {
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px;
-  }
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
 
-  .menu-categories {
-    gap: 10px;
+@media (max-width: 768px) {
+  .menu-title {
+    font-size: 2.2rem;
   }
 
   .menu-category-btn {
-    padding: 10px 20px;
     font-size: 0.9rem;
+    padding: 10px 20px;
   }
 
-  .menu-title {
-    font-size: 2rem;
+  .menu-item img {
+    height: 180px;
   }
-}
-
-@media (max-width: 480px) {
-  .menu-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .menu-container {
-    padding: 60px 15px;
-  }
-}
-/* Admin Login Styles */
-
-.admin-login-modal {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.8);
-  z-index: 10000;
-  justify-content: center;
-  align-items: center;
-}
-
-.admin-login-content {
-  background: white;
-  padding: 30px;
-  border-radius: 15px;
-  width: 90%;
-  max-width: 400px;
-  position: relative;
-  text-align: center;
-}
-
-.close-admin-modal {
-  position: absolute;
-  top: 15px;
-  right: 20px;
-  font-size: 24px;
-  cursor: pointer;
-}
-
-.admin-hint {
-  font-size: 12px;
-  color: #666;
-  margin-top: 15px;
 }

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Login</title>
+  <link rel="stylesheet" href="admin.css" />
+</head>
+<body>
+  <div class="admin-login-container">
+    <form id="loginForm" class="admin-login-form">
+      <h2>🔐 Admin Panelga Kirish</h2>
+
+      <div class="input-group">
+        <label for="username">Foydalanuvchi nomi</label>
+        <input type="text" id="username" placeholder="admin" required />
+      </div>
+
+      <div class="input-group">
+        <label for="password">Parol</label>
+        <input type="password" id="password" placeholder="12345" required />
+      </div>
+
+      <button type="submit" class="login-btn">Kirish</button>
+      <p id="message" class="message"></p>
+    </form>
+  </div>
+
+  <script src="admin-login.js"></script>
+</body>
+</html>

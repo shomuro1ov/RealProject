@@ -1,92 +1,72 @@
-/* Admin Logout Button */
-.logout-btn {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  background: var(--danger-color);
-  color: white;
-  padding: 8px 15px;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: all 0.3s ease;
-}
-
-.logout-btn:hover {
-  background: #c0392b;
-  transform: translateY(-2px);
-}
-
-/* Statistics Cards */
-.stats-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
-  margin-top: 20px;
-}
-
-.stat-card {
-  background: linear-gradient(
-    135deg,
-    var(--primary-color),
-    var(--secondary-color)
-  );
-  color: white;
-  padding: 25px;
-  border-radius: 10px;
-  text-align: center;
-  box-shadow: var(--shadow);
-}
-
-.stat-card h4 {
-  font-size: 0.9rem;
-  margin-bottom: 10px;
-  opacity: 0.9;
-}
-
-.stat-card span {
-  font-size: 2rem;
-  font-weight: 700;
-}
-
-/* Tab Navigation */
-.admin-tabs {
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #ff7b00, #ffb347);
   display: flex;
-  gap: 10px;
-  margin-bottom: 30px;
-  border-bottom: 2px solid var(--border-color);
-  padding-bottom: 10px;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
 }
 
-.admin-tab {
-  padding: 12px 25px;
-  background: var(--light-color);
-  border: none;
-  border-radius: 8px 8px 0 0;
-  cursor: pointer;
-  font-weight: 600;
-  transition: all 0.3s ease;
+.admin-login-container {
+  background: white;
+  padding: 40px 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
 }
 
-.admin-tab.active {
-  background: var(--primary-color);
-  color: white;
+.admin-login-form h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #333;
 }
 
-.admin-tab-content {
-  display: none;
+.input-group {
+  margin-bottom: 20px;
 }
 
-.admin-tab-content.active {
+label {
   display: block;
-  animation: fadeIn 0.5s ease;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #444;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+input:focus {
+  border-color: #ff7b00;
+  outline: none;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #ff7b00;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.login-btn:hover {
+  background-color: #ff9500;
+}
+
+.message {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 0.95rem;
 }
