@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="uz">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menga Cafe - Admin Panel</title>
+    <link rel="stylesheet" href="admin.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Menga Cafe - Admin Panel</h1>
+        <p>Mahsulotlarni boshqarish</p>
+        <a href="index.html" class="admin-link">Menyuga Qaytish</a>
+      </header>
+
+      <div class="admin-panel">
+        <div class="admin-section">
+          <h3>Kategoriya Qo'shish</h3>
+          <div class="form-group">
+            <label for="categoryName">Kategoriya Nomi</label>
+            <input
+              type="text"
+              id="categoryName"
+              class="form-control"
+              placeholder="Masalan: Hot Doglar"
+            />
+          </div>
+          <button class="btn" id="addCategoryBtn">Kategoriya Qo'shish</button>
+        </div>
+
+        <div class="admin-section">
+          <h3>Mahsulot Qo'shish</h3>
+          <div class="form-group">
+            <label for="productName">Mahsulot Nomi</label>
+            <input
+              type="text"
+              id="productName"
+              class="form-control"
+              placeholder="Masalan: Klassik Hot Dog"
+            />
+          </div>
+          <div class="form-group">
+            <label for="productPrice">Narxi</label>
+            <input
+              type="text"
+              id="productPrice"
+              class="form-control"
+              placeholder="Masalan: 18,000 so'm"
+            />
+          </div>
+          <div class="form-group">
+            <label for="productCategory">Kategoriya</label>
+            <select id="productCategory" class="form-control">
+              <!-- Categories will be populated by JavaScript -->
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="productImage">Rasm URL</label>
+            <input
+              type="text"
+              id="productImage"
+              class="form-control"
+              placeholder="Rasm manzilini kiriting"
+            />
+          </div>
+          <div class="form-group">
+            <label for="productDescription">Tavsif</label>
+            <textarea
+              id="productDescription"
+              class="form-control"
+              rows="3"
+              placeholder="Mahsulot haqida qisqacha tavsif"
+            ></textarea>
+          </div>
+          <button class="btn" id="addProductBtn">Mahsulot Qo'shish</button>
+        </div>
+
+        <div class="admin-section">
+          <h3>Mavjud Mahsulotlar</h3>
+          <div class="items-list" id="productsList">
+            <!-- Products will be loaded from localStorage -->
+          </div>
+        </div>
+
+        <div class="admin-section">
+          <h3>Ma'lumotlarni Boshqarish</h3>
+          <button class="btn btn-secondary" id="exportDataBtn">
+            Ma'lumotlarni Yuklab Olish
+          </button>
+          <button class="btn btn-danger" id="resetDataBtn">
+            Barcha Ma'lumotlarni O'chirish
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="admin.js"></script>
+  </body>
+</html>

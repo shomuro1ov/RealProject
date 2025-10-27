@@ -16,11 +16,11 @@
   </head>
   <body>
     <!-- Header -->
+    <!-- Header qismiga admin kirish tugmasini qo'shing -->
     <header id="header">
       <div class="container header-container">
         <a href="#" class="logo">
           <i class="fas fa-utensils"></i>
-          BiteTime
         </a>
         <div class="mobile-menu">
           <i class="fas fa-bars"></i>
@@ -31,9 +31,46 @@
           <li><a href="#gallery">Gallery</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#contact">Contact</a></li>
+          <!-- Admin kirish tugmasi -->
+          <li>
+            <a href="#" id="adminLoginBtn" class="admin-login-btn">
+              <i class="fas fa-lock"></i> Admin
+            </a>
+          </li>
         </ul>
       </div>
     </header>
+
+    <!-- ajsdghasiudghaisughdiashdhashdihas -->
+    <!-- Admin Login Modal -->
+    <div class="admin-login-modal" id="adminLoginModal">
+      <div class="admin-login-content">
+        <span class="close-admin-modal">&times;</span>
+        <h3>Admin Panelga Kirish</h3>
+        <form id="adminLoginForm">
+          <div class="form-group">
+            <label>Login:</label>
+            <input
+              type="text"
+              id="adminUsername"
+              placeholder="admin"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label>Parol:</label>
+            <input
+              type="password"
+              id="adminPassword"
+              placeholder="••••••••"
+              required
+            />
+          </div>
+          <button type="submit" class="btn">Kirish</button>
+          <p class="admin-hint">Default: admin / admin123</p>
+        </form>
+      </div>
+    </div>
 
     <!-- Hero Section -->
     <section class="hero" id="home">
@@ -80,37 +117,51 @@
     </section>
 
     <!-- Menu Section -->
-<section class="menu" id="menu">
-  <div class="menu-container">
-    <h2 class="menu-title">Our Menu</h2>
+    <section class="menu" id="menu">
+      <div class="menu-container">
+        <h2 class="menu-title">Our Menu</h2>
 
-    <div class="menu-categories">
-      <button class="menu-category-btn active" data-category="lavash">Lavashlar</button>
-      <button class="menu-category-btn" data-category="burgers">Bamburgerlar</button>
-      <button class="menu-category-btn" data-category="chesse">Cheselar</button>
-      <button class="menu-category-btn" data-category="drinks">Suvlar</button>
-      <button class="menu-category-btn" data-category="desserts">Shirinliklar</button>
-    </div>
+        <!-- Menga Cafe Menu Categories -->
+        <div class="menu-categories">
+          <button class="menu-category-btn active" data-category="all">
+            Hammasi
+          </button>
+          <button class="menu-category-btn" data-category="lavash">
+            Lavashlar
+          </button>
+          <button class="menu-category-btn" data-category="burgers">
+            Bamburgerlar
+          </button>
+          <button class="menu-category-btn" data-category="chesse">
+            Cheselar
+          </button>
+          <button class="menu-category-btn" data-category="drinks">
+            Suvlar
+          </button>
+          <button class="menu-category-btn" data-category="desserts">
+            Shirinliklar
+          </button>
+        </div>
 
-    <div class="menu-grid" id="menuGrid"></div>
-  </div>
-
-  <!-- Popup (Modal) -->
-  <div class="menu-modal" id="menuModal">
-    <div class="menu-modal-content">
-      <span class="menu-modal-close" id="closeModal">&times;</span>
-      <div class="menu-modal-body">
-        <img id="modalImage" class="menu-modal-img" alt="">
-        <h3 class="menu-modal-body-title" id="modalTitle"></h3>
-        <p class="menu-modal-body-desc" id="modalDescription"></p>
-        <h4 class="menu-modal-body-subtitle">Ingredients:</h4>
-        <ul class="menu-modal-body-list" id="modalIngredients"></ul>
-        <p class="menu-modal-body-nutrition" id="modalNutrition"></p>
+        <!-- Menga Cafe Menu Grid -->
+        <div class="menu-grid" id="menuGrid">
+          <!-- Menu items will be loaded here -->
+        </div>
       </div>
-    </div>
-  </div>
-</section>
 
+      <!-- Menga Cafe Popup (Modal) -->
+      <div class="menu-modal" id="menuModal">
+        <div class="menu-modal-content">
+          <span class="menu-modal-close" id="closeModal">&times;</span>
+          <div class="menu-modal-body">
+            <img id="modalImage" class="menu-modal-img" alt="" />
+            <h3 class="menu-modal-body-title" id="modalTitle"></h3>
+            <p class="menu-modal-body-price" id="modalPrice"></p>
+            <p class="menu-modal-body-desc" id="modalDescription"></p>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- Gallery Section -->
     <section class="gallery" id="gallery">
